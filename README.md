@@ -135,7 +135,7 @@ See the LICENSE file for full details.
 M.E.D.U.S.A. is intended for educational, research, and personal development purposes.
 It is not to be used for psychological manipulation, surveillance, or clinical diagnostics.
 
-Contact
+Contact:
 Mrityunjya Sankar
-Creator & Architect – M.E.D.U.S.A. (Mirror Engine for Dissonance, Unconscious Symbolism, and Alignment)
+Creator – M.E.D.U.S.A. (Mirror Engine for Dissonance, Unconscious Symbolism, and Alignment)
 E-mail:- medusa.ethics.ai@gmail.com
