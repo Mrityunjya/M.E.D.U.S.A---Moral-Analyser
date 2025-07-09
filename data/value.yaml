@@ -1,0 +1,56 @@
+core_values:
+  - id: honesty
+    name: "Honesty"
+    description: "The value of truthfulness and transparency, even when uncomfortable."
+
+  - id: peace
+    name: "Peace"
+    description: "The desire to maintain harmony and avoid conflict."
+
+  - id: compassion
+    name: "Compassion"
+    description: "Empathic concern for others, leading to kindness and help."
+
+  - id: justice
+    name: "Justice"
+    description: "Upholding fairness, equity, and moral accountability."
+
+  - id: loyalty
+    name: "Loyalty"
+    description: "Staying faithful to people, communities, or ideals."
+
+  - id: autonomy
+    name: "Autonomy"
+    description: "The right and ability to govern oneself and one's actions."
+
+  - id: obedience
+    name: "Obedience"
+    description: "Following the expectations of authority, parents, or systems."
+
+  - id: integrity
+    name: "Integrity"
+    description: "Living in alignment with your principles and values."
+
+  - id: courage
+    name: "Courage"
+    description: "Acting according to truth, even in the face of fear."
+
+  - id: safety
+    name: "Safety"
+    description: "Protecting physical, emotional, or social well-being."
+
+  - id: self-respect
+    name: "Self-Respect"
+    description: "Maintaining your dignity, boundaries, and worth."
+
+  - id: authenticity
+    name: "Authenticity"
+    description: "Living in accordance with your true self, not just societal roles."
+
+  - id: conformity
+    name: "Conformity"
+    description: "Fitting into expected roles or norms for social acceptance."
+
+  - id: belonging
+    name: "Belonging"
+    description: "Desire to be accepted and connected with a group."

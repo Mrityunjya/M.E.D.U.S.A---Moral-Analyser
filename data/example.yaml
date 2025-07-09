@@ -1,0 +1,28 @@
+examples:
+  - entry: "I didn’t tell my friend about the flaw in their project. I didn’t want to hurt them."
+    expected_conflict: conflict_01
+    detected_values: ["honesty", "peace"]
+    archetype: ghost
+    dissonance_score: 65
+    reflection: "Was silence protection today, or avoidance?"
+
+  - entry: "I defended my teammate even though I knew they were wrong — I couldn’t let them get blamed."
+    expected_conflict: conflict_02
+    detected_values: ["loyalty", "justice"]
+    archetype: martyr
+    dissonance_score: 72
+    reflection: "Were you loyal to them, or disloyal to your truth?"
+
+  - entry: "I went along with the group’s prank even though I felt it was wrong. I didn’t want to be left out."
+    expected_conflict: conflict_07
+    detected_values: ["belonging", "integrity"]
+    archetype: chameleon
+    dissonance_score: 78
+    reflection: "Was that your choice, or the cost of fitting in?"
+
+  - entry: "I stayed silent when my parents told me to take a job I hate. I don't want to disappoint them."
+    expected_conflict: conflict_08
+    detected_values: ["obedience", "autonomy"]
+    archetype: rebel
+    dissonance_score: 80
+    reflection: "Did you honor your path, or live the one assigned to you?"

@@ -1,0 +1,30 @@
+archetypes:
+  - id: ghost
+    name: "The Ghost"
+    description: "Avoids conflict, fades into silence, suppresses self-truth."
+    trigger_values: ["honesty", "autonomy"]
+    color: "#8e9aaf"
+
+  - id: martyr
+    name: "The Martyr"
+    description: "Sacrifices self to maintain others' comfort or expectations."
+    trigger_values: ["loyalty", "compassion"]
+    color: "#d00000"
+
+  - id: shadow
+    name: "The Shadow"
+    description: "Hides behind fear, shame, or judgment to avoid truth."
+    trigger_values: ["courage", "authenticity"]
+    color: "#000000"
+
+  - id: rebel
+    name: "The Rebel"
+    description: "Wants to break free from imposed systems, but risks chaos."
+    trigger_values: ["autonomy", "integrity"]
+    color: "#ff6f61"
+
+  - id: chameleon
+    name: "The Chameleon"
+    description: "Blends in for safety or approval, even when values are violated."
+    trigger_values: ["belonging", "integrity"]
+    color: "#3a86ff"

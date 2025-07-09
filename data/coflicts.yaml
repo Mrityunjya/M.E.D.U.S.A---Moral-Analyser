@@ -1,0 +1,54 @@
+moral_conflicts:
+  - id: conflict_01
+    name: "Honesty vs Peace"
+    description: "Telling the truth could disturb harmony"
+    core_values: ["honesty", "peace"]
+    symptoms: ["suppressed truth", "white lies", "emotional discomfort"]
+    archetype_trigger: "Ghost"
+    reflection_prompt: "Was silence protection today, or avoidance?"
+
+  - id: conflict_02
+    name: "Loyalty vs Justice"
+    description: "Loyalty to someone may mean enabling injustice"
+    core_values: ["loyalty", "justice"]
+    symptoms: ["defensive justification", "moral guilt", "split empathy"]
+    archetype_trigger: "Martyr"
+    reflection_prompt: "Were you loyal to them, or disloyal to your truth?"
+
+  - id: conflict_03
+    name: "Autonomy vs Obedience"
+    description: "Following your own path breaks rules or expectations"
+    core_values: ["autonomy", "obedience"]
+    symptoms: ["internal resistance", "suppressed rebellion", "passive compliance"]
+    archetype_trigger: "Rebel"
+    reflection_prompt: "Did obedience protect your job, or silence your integrity?"
+
+  - id: conflict_04
+    name: "Compassion vs Self-Respect"
+    description: "Being kind may erode your self-worth if boundaries are violated"
+    core_values: ["compassion", "self-respect"]
+    symptoms: ["over-apologizing", "letting others overstep", "internal collapse"]
+    archetype_trigger: "Martyr"
+    reflection_prompt: "Was that compassion, or self-erasure?"
+
+  - id: conflict_05
+    name: "Courage vs Safety"
+    description: "Doing the right thing risks personal loss"
+    core_values: ["courage", "safety"]
+    symptoms: ["freezing", "retreat", "post-event guilt"]
+    archetype_trigger: "Shadow"
+    reflection_prompt: "Did you protect your peace, or betray your voice?"
+
+  - id: conflict_06
+    name: "Social Pressure vs Authentic Will"
+    description: "Society's norms conflict with your inner truth or unconventional choices"
+    core_values: ["authenticity", "conformity"]
+    symptoms: ["feeling fake", "fear of judgment", "double life behavior"]
+    archetype_trigger: "Shadow"
+    reflection_prompt: "Did you choose what's true for you, or what they expect?"
+
+  - id: conflict_07
+    name: "Peer Pressure vs Moral Compass"
+    description: "Friends influence you to act against your own ethical intuition"
+    core_values: ["belonging", "integrity"]
+    symptoms: ["doing]()

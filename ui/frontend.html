@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M.E.D.U.S.A. — Moral Analyzer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #f72585;
+      margin-bottom: 24px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 140px;
+      padding: 14px;
+      font-size: 16px;
+      background: #1c1c1c;
+      border: 1px solid #333;
+      color: #f0f0f0;
+      border-radius: 10px;
+      resize: vertical;
+      transition: border 0.2s;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #7209b7;
+    }
+
+    button {
+      margin-top: 16px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #7209b7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #560bad;
+    }
+
+    .result {
+      margin-top: 32px;
+      padding: 24px;
+      background: #181818;
+      border-left: 5px solid #f72585;
+      border-radius: 8px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .key {
+      color: #bbbbbb;
+      font-weight: 600;
+    }
+
+    .value {
+      color: #ffffff;
+    }
+
+    em {
+      color: #999;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>M.E.D.U.S.A. — Daily Moral Analyzer</h1>
+  <textarea id="journalInput" placeholder="Type your journal entry for today..."></textarea>
+  <br />
+  <button onclick="analyze()">🧠 Analyze</button>
+
+  <div class="result" id="result" style="display: none;"></div>
+
+  <script>
+    async function analyze() {
+      const entry = document.getElementById("journalInput").value.trim();
+      const resultDiv = document.getElementById("result");
+
+      if (!entry) {
+        resultDiv.innerHTML = "⚠️ Please enter something to analyze.";
+        resultDiv.style.display = "block";
+        return;
+      }
+
+      resultDiv.innerHTML = "⏳ Analyzing your reflection...";
+      resultDiv.style.display = "block";
+
+      try {
+        const response = await fetch("http://localhost:8000/analyze", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ entry })
+        });
+
+        if (!response.ok) {
+          throw new Error("Server Error");
+        }
+
+        const result = await response.json();
+
+        resultDiv.innerHTML = `
+          <p><span class="key">🧭 Detected Values:</span> <span class="value">${result.detected_values.join(', ')}</span></p>
+          <p><span class="key">⚔️ Conflict:</span> <span class="value">${result.conflict_type}</span></p>
+          <p><span class="key">🎭 Archetype:</span> <span class="value">${result.archetype}</span></p>
+          <p><span class="key">📉 Dissonance Score:</span> <span class="value">${result.dissonance_score}%</span></p>
+          <p><span class="key">🪞 Reflection Prompt:</span><br><em>"${result.reflection}"</em></p>
+          <p><span class="key">📝 Poetic Feedback:</span><br><em>${result.feedback.poetic}</em></p>
+          <p><span class="key">🛠️ Practical Advice:</span><br>${result.feedback.practical}</p>
+        `;
+      } catch (error) {
+        resultDiv.innerHTML = "⚠️ An error occurred while analyzing. Please try again later.";
+        console.error("Analysis failed:", error);
+      }
+    }
+  </script>
+
+</body>
+</html>
