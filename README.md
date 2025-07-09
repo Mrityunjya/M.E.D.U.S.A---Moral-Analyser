@@ -69,17 +69,20 @@ medusa_project/
     ├── conflicts.yaml
     ├── archetypes.yaml
     └── examples.yaml
+
 Installation
 Clone the repository
-
-git clone https://github.com/yourusername/medusa.git
+```bash
+git clone https://github.com/yourusername/M.E.D.U.S.A---Moral-Analyser.git
 cd medusa
+```
 Install dependencies
-
+```
 pip install fastapi uvicorn pyyaml
 Run the API server
 
 uvicorn main:app --reload
+```
 Launch the frontend
 Open frontend.html in your browser. Ensure the API is running at http://localhost:8000.
 
